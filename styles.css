@@ -1,0 +1,470 @@
+/* Body */
+
+body {
+    background-color: #333333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #CCCCCC;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #DDDDDD;
+}
+
+p {
+    text-align: center;
+    font-size: 12pt;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: #BBBBBB;
+}
+
+.input-container h2 {
+    color: #DDDDDD;
+}
+
+/* Container */
+
+.input-container {
+    display: flex;
+}
+
+.input-container p {
+    text-align: left;
+    font-size: 12pt;
+    color: #BBBBBB;
+    margin-bottom: 10px;
+}
+
+/* Each Stat Box */
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #222222;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Single Stat Box */
+
+#single-stat-container select {
+    flex: 1;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #CCCCCC;
+}
+
+#advanced-switch {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.advanced-div {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    border-radius: 5px;
+    display: block;
+    visibility: hidden;
+}
+
+#classification-method{
+    flex: 1;
+    display: inline-block;
+}
+
+#number-of-classes{
+    display: inline-block;
+    flex: 0;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #CCCCCC;
+}
+
+#legend-switch{
+    display: inline-block;
+}
+
+#single-advanced-options-container {
+    display: flex;
+    align-items: stretch;
+}
+
+#single-advanced-options-container label {
+    color: #DDDDDD;
+    font-size: 12pt;
+    margin: 10px;
+    vertical-align: middle
+}
+
+#single-options-container {
+    display: flex;
+}
+
+#single-stat-type {
+    flex: 1;
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Checkbox */
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 30px; /* Adjust the padding as needed */
+    cursor: pointer;
+    font-size: 12pt; /* Adjust the font size as needed */
+    color: #CCCCCC;
+}
+
+.checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-custom {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    left: 0;
+    height: 20px; /* Adjust the height as needed */
+    width: 20px; /* Adjust the width as needed */
+    background-color: #fff; /* Adjust the background color as needed */
+    border: 2px solid #555; /* Adjust the border color and size as needed */
+    border-radius: 50%; /* Make the checkbox round */
+}
+
+.checkbox-label input:checked ~ .checkbox-custom {
+    background-color: #CCC; /* Adjust the checked background color as needed */
+}
+
+.checkbox-label .checkbox-custom:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom:after {
+    display: block;
+    border-color: #000000; /* Change the color of the check mark */
+}
+
+.checkbox-label .checkbox-custom:after {
+    left: 6px; /* Adjust the position as needed */
+    top: 2px; /* Adjust the position as needed */
+    width: 5px; /* Adjust the size as needed */
+    height: 10px; /* Adjust the size as needed */
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-label input:disabled ~ .checkbox-custom,
+.checkbox-label input:disabled ~ .checkbox-custom:after{
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+
+.checkbox-label p{
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 12pt; 
+    color: #CCCCCC;
+}
+
+/* Legend */
+
+#legend-container{
+    display: none;
+}
+
+#legend-table td{
+    vertical-align: middle;
+}
+
+#legend-container p{
+    text-align: left;
+    font-size: 10pt;
+}
+
+.legend-label {
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+    margin-right: 5px;
+    border: 1px solid black;
+}
+
+.legend-label{
+    font-size: 10pt;
+    margin-right: 5px;
+}
+
+/* Grid */
+
+#grid-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #CCCCCC;
+}
+
+#grid-subtitle{
+    text-align: center;
+    font-size: 12pt;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: #BBBBBB;
+}
+
+#grid-container {
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: separate;
+}
+
+#grid-container td {
+    width: 25px;
+    height: 25px;
+    margin-top: 0px;
+    margin-left: 1px;
+    margin-bottom: 0px;
+    margin-right: 1px;
+}
+
+td.cell1 {
+    border: 1px solid #000000;
+    background-color: #444;
+}
+
+td.cell2 {
+    border: 1px transparent;
+    opacity: 0;
+}
+
+td.cell3 {
+    border: 1px solid #000000;
+    background-color: #FADA24;
+}
+
+th {
+    font-size: 18px;
+}
+
+#filter-stat-lines-container {
+    min-height: calc(5 * 40px);
+}
+
+.player-box {
+    position: absolute;
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 14px;
+    opacity: .9;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Filter */
+
+.stat-inputs {
+    margin-bottom: 10px;
+}
+
+.stat-line {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 10px;
+}
+
+.stat-type-container{
+    flex: 1;
+    margin-right: 5px;
+}
+
+.stat-type {
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #CCCCCC;
+}
+
+.operation-and-value,
+.college-value,
+.team-value,
+.bool-value {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.operation {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #CCCCCC;
+}
+
+.num-input {
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 3px;
+    border: 1px solid #CCCCCC;
+    width: 50px;
+}
+
+.bool-select {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #CCCCCC;
+}
+
+.team-select {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #CCCCCC;
+}
+
+.college-select {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #CCCCCC;
+}
+
+.delete-stat {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    color: #000000;
+    cursor: pointer;
+}
+
+.delete-stat:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#add-stat {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    color: #000000;
+    cursor: pointer;
+}
+
+#add-stat:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.go {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 3px;
+    background-color: #FADA24;
+    color: #000000;
+    cursor: pointer;
+}
+
+.go:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* Single Stat */
+
+#single-go-container{
+    display: flex; 
+    flex-direction: column; 
+    flex-grow: 1;
+}
+
+#single-go{
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+#filter-submit-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    margin-right: 0px;
+}
+
+#logic {
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #CCCCCC;
+}
+
+#logic-container {
+    visibility: hidden;
+    display: inline-block;
+}
+
+#filter-button-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    margin-right: 0px;
+}
